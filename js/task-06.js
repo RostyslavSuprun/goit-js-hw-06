@@ -1,7 +1,7 @@
 const inputTextEl = document.querySelector("#validation-input")
 inputTextEl.addEventListener('blur', blur);
 function blur(event) {
-     if (event.currentTarget.value.length === 6) {
+     if (event.currentTarget.value.length === Number(event.currentTarget.dataset.length)) {
         // outputTextEl.textContent = "Anonymous";
          inputTextEl.className = "valid";
 
@@ -15,6 +15,8 @@ function blur(event) {
     // outputTextEl.textContent = event.currentTarget.value;
     console.log(event.currentTarget.value.length);
     console.log(event.currentTarget.value);
+    
+    console.log(event.currentTarget.dataset.length);
 };
 
 
